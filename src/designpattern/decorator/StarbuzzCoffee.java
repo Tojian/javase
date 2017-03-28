@@ -14,8 +14,7 @@ public class StarbuzzCoffee {
 		beverage=new Mocha(beverage);
 		
 		System.out.println(beverage.getDescription()+" $"+beverage.cost());
-		
-		
+
 	}
 
 }
