@@ -1,7 +1,5 @@
 package offer;
 
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * 
@@ -28,29 +26,45 @@ public class Test02 {
      * 最直观的解法就是每次遇到一次就会发生扩容，向后面扩容
 	 */
 	public static char[] exchangeString(char [] str,int length){
-		List list=new ArrayList();
-		length=str.length;
-		for(int i=0;i<length;i++){
-			if(str[i]==' '){
-				//向后面移动两位
-				str=new char[length+2];
-				for(int j=length;j<i;j--){
-					str[j]=str[j+2];
-				}
-			}
+		if(str==null||length<=0){
+			System.out.println();
 		}
 		
-		return str;
+		int originalLength=length;
+		int numberBlank=0;
+		int i=0;
+		for(;i<length;i++){
+			if(str[i]==' ')
+				++numberBlank;
+		}
 		
+		int newlength=originalLength+numberBlank*2;
+		if(newlength>length)
+			System.out.println();
+		
+		int indexofOriginal=originalLength;
+		int indexOfNew=newlength;
+		while(indexofOriginal>=0&&indexOfNew>indexofOriginal){
+			if(str[indexofOriginal]==' '){
+				str[indexOfNew--]='0';
+				str[indexOfNew--]='2';
+				str[indexOfNew--]='%';
+			}else{
+				str[indexOfNew--]=str[indexofOriginal];
+			}
+			--indexofOriginal;
+		}
+		return str;
 	}
 	public static void main(String[] args) {
 		
-		/*
-		 * 这是第一种方法进行测试
-		 * String str="We are happy";
-		String newstr=exchangeString01(str);
-		System.out.println(newstr);*/
-		
+	
+		 char []str={'W','e',' ','a','r','e',' ','h','a','p','p','y'};
+	  
+	   char []strex  =exchangeString(str,str.length);
+	    for(int i=0;i<strex.length;i++){
+	    	System.out.print(strex[i]);
+	    }
 	}
 
 }

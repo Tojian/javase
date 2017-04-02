@@ -1,4 +1,7 @@
 package offer;
+
+import java.util.Scanner;
+
 /**
  * 
  * @author taojian
@@ -50,9 +53,17 @@ public class Test01 {
 	}
 	public static void main(String[] args) {
 		
-		int [][]a={{1,2,8,9},{2,4,9,12},{4,7,10,13},{6,8,11,15}};
-		System.out.println(isExitNormal(a,7,4,4));
-		System.out.println(isExit(a,7,4,4));
+		Scanner sc=new Scanner(System.in);
+         int row=sc.nextInt();
+         int column=sc.nextInt();
+         int n=sc.nextInt();
+		int [][]a=new int[row][column];
+		for(int i=0;i<row;i++){
+			for(int j=0;j<column;j++)
+				a[i][j]=sc.nextInt();
+		}
+	
+		System.out.println(isExit(a,n,row,column));
 		
 	}
 }
