@@ -11,11 +11,10 @@ import java.lang.annotation.Target;
 /**
  *
  */
-@Target(ElementType.METHOD)
+@Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface UserCase {
 
-    public int id();
 
     public String description() default "no description";
 }
