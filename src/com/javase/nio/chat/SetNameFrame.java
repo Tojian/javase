@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 Baidu, Inc. All Rights Reserved.
+ * Copyright (C) 2018 Tao Jian. All Rights Reserved.
  */
 package com.javase.nio.chat;
 
