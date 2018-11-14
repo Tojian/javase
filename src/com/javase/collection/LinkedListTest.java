@@ -5,12 +5,7 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.NoSuchElementException;
 
-/*
- * @desc LinkedList测试程序。
- *
- * @author skywang
- * @email  kuiwu-wang@163.com
- */
+
 public class LinkedListTest {
     public static void main(String[] args) {
         // 测试LinkedList的API
