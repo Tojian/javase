@@ -1,6 +1,0 @@
-package com.javase.designpattern.strategy;
-
-public interface  FlyBehavior {
-
-	public void fly();
-}

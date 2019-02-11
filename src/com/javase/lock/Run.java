@@ -3,9 +3,7 @@
  */
 package com.javase.lock;
 
-/**
- * Created by Administrator on 2017/9/6 0006.
- */
+
 public class Run {
 
     public static void main(String[] args) {
